@@ -1,0 +1,20 @@
+<h1 style="color: #2F7336;">Customers</h1>
+<div class="row">
+  <% users.forEach((user) => { %>
+    
+      <div class="col-sm-6 mb-5">
+    <div class="card text-white bg-blue-grad">
+      <div class="card-image">
+        <%=user.firstName.substring(0,1).toUpperCase()%> 
+      </div>
+      <div class="card-body card-styles">
+        <div>
+          <a href="/user/<%=user._id%>" class="card-name" title="view profile"><%=user.firstName %> <%=user.lastName %></a>
+        </div>
+        <div><%=user.email%></div>
+        <div>Balance : <%=user.currentBalance%></div>
+      </div>
+    </div>
+  </div>
+  <% }); %>
+</div>
